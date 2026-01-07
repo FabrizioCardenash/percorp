@@ -54,9 +54,6 @@ export default function Sphere({
         metalness={metalness}
         distort={distort}
         speed={speed}
-        // @ts-expect-error - iridescence props exist in newer Three.js
-        iridescence={0.3}
-        iridescenceIOR={1.3}
       />
     </mesh>
   )
