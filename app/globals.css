@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --border: 0 0% 89.8%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --border: 0 0% 14.9%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-base leading-relaxed font-body;
+  }
+  
+  /* Tipografía para títulos - Neue Machina */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight-heading;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  /* Tipografía para párrafos - Aptos */
+  p {
+    @apply font-body text-base md:text-lg;
+  }
+  
+  /* Links */
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium font-body text-white bg-accent hover:bg-accent-dark transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium font-body text-primary bg-white border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 rounded-lg;
+  }
+  
+  /* Tipografía display para elementos destacados */
+  .text-display {
+    @apply font-heading font-bold tracking-tight-heading;
+  }
+  
+  /* Tipografía para subtítulos */
+  .text-subtitle {
+    @apply font-body font-medium text-lg md:text-xl;
+  }
+  
+  /* Labels y texto pequeño */
+  .text-label {
+    @apply font-body font-semibold text-sm uppercase tracking-wider;
+  }
+}
+
+/* Mejoras de renderizado de fuentes */
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Animación de gradiente para glow box */
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
