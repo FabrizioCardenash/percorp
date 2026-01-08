@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Building2, TrendingDown, Eye, ArrowRight } from 'lucide-react'
-import Image from 'next/image'
+import { Waves } from '@/components/ui/waves'
 
 const bullets = [
   {
@@ -25,28 +25,15 @@ const bullets = [
 export default function InfraestructuraHero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-black pt-20">
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/rendersdeproyectos/OF1.jpg"
-          alt="Oficinas corporativas"
-          fill
-          className="object-cover opacity-40"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
-      </div>
-
-      {/* Purple accent glow */}
-      <motion.div
-        className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#7800FF]/20 rounded-full blur-[120px]"
-        animate={{ 
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.3, 0.2]
-        }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      {/* Waves Background */}
+      <Waves 
+        strokeColor="#7800FF"
+        backgroundColor="#000000"
+        className="opacity-60"
       />
+
+      {/* Gradient overlay for better text readability */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/50 via-transparent to-black/80" />
 
       {/* Content */}
       <div className="relative z-10 container-custom min-h-screen flex flex-col justify-center py-20">
@@ -56,7 +43,7 @@ export default function InfraestructuraHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#7800FF]/10 border border-[#7800FF]/30 rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#7800FF]/10 border border-[#7800FF]/30 rounded-full mb-8 backdrop-blur-sm"
           >
             <Building2 className="w-4 h-4 text-[#7800FF]" />
             <span className="text-sm font-body text-[#7800FF]">PERCORP Infraestructura</span>
@@ -98,7 +85,7 @@ export default function InfraestructuraHero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:border-[#7800FF]/30 transition-colors"
+                className="flex items-start gap-4 p-4 bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl hover:border-[#7800FF]/30 transition-colors"
               >
                 <div className="p-2 bg-[#7800FF]/10 rounded-lg">
                   <bullet.icon className="w-5 h-5 text-[#7800FF]" />
@@ -160,4 +147,3 @@ export default function InfraestructuraHero() {
     </section>
   )
 }
-
