@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from '@/hooks/useInView'
+import Image from 'next/image'
 
 const pasos = [
   {
@@ -62,25 +63,15 @@ export default function MetodologiaInfra() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden md:flex flex-col items-center gap-2"
+              className="hidden md:block"
             >
-              <div className="flex flex-col items-center">
-                <div className="flex gap-1 mb-1">
-                  <span className="text-white text-lg">✦</span>
-                  <span className="text-white text-lg">✦</span>
-                  <span className="text-white text-lg">✦</span>
-                </div>
-                <div className="flex items-center gap-0.5">
-                  <div className="w-0.5 h-8 bg-white"></div>
-                  <div className="w-0.5 h-12 bg-white"></div>
-                  <div className="w-0.5 h-8 bg-white"></div>
-                  <div className="w-0.5 h-14 bg-white mx-1"></div>
-                  <div className="w-0.5 h-8 bg-white"></div>
-                  <div className="w-0.5 h-12 bg-white"></div>
-                  <div className="w-0.5 h-8 bg-white"></div>
-                </div>
-                <span className="text-white text-xs font-body tracking-wider mt-2">PERCORP</span>
-              </div>
+              <Image
+                src="/imagenes web/logo percorp.png"
+                alt="PERCORP Logo"
+                width={120}
+                height={80}
+                className="object-contain"
+              />
             </motion.div>
           </div>
         </div>
