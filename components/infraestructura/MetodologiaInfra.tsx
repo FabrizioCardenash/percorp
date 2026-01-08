@@ -43,8 +43,8 @@ export default function MetodologiaInfra() {
 
   return (
     <section id="metodologia" ref={ref} className="relative overflow-hidden">
-      {/* Header con fondo azul */}
-      <div className="relative bg-[#3B4BA6] pt-16 pb-32">
+      {/* Header con fondo morado */}
+      <div className="relative bg-[#7800FF] pt-16 pb-32">
         <div className="container-custom relative z-10">
           <div className="flex items-start justify-between">
             <motion.h2
@@ -66,9 +66,9 @@ export default function MetodologiaInfra() {
             >
               <div className="flex flex-col items-center">
                 <div className="flex gap-1 mb-1">
-                  <span className="text-[#7800FF] text-lg">✦</span>
-                  <span className="text-[#7800FF] text-lg">✦</span>
-                  <span className="text-[#7800FF] text-lg">✦</span>
+                  <span className="text-white text-lg">✦</span>
+                  <span className="text-white text-lg">✦</span>
+                  <span className="text-white text-lg">✦</span>
                 </div>
                 <div className="flex items-center gap-0.5">
                   <div className="w-0.5 h-8 bg-white"></div>
