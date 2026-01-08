@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
 const empresas = [
+  { name: 'Infraestructura', href: '/infraestructura', description: 'Arquitectura, construcción y gestión' },
   { name: 'Energía', href: '/energia', description: 'Infraestructura eléctrica y optimización' },
   { name: 'Conectividad', href: '/conectividad', description: 'Redes y comunicaciones' },
   { name: 'Automatización', href: '/automatizacion', description: 'Control y sistemas inteligentes' },
@@ -186,4 +187,5 @@ export default function Header() {
     </header>
   )
 }
+
 
