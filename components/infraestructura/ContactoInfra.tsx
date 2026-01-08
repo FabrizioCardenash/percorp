@@ -41,24 +41,53 @@ export default function ContactoInfra() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormState({
-        nombre: '',
-        empresa: '',
-        cargo: '',
-        email: '',
-        telefono: '',
-        tipoProyecto: '',
-        metros: '',
-        mensaje: '',
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'a7dd159f-3e6e-4a4c-9f63-545926b89d1c',
+          subject: `🏗️ Nuevo contacto Infraestructura: ${formState.nombre} - ${formState.tipoProyecto}`,
+          from_name: 'PERCORP Infraestructura',
+          to: 'arq.brunoperez@gmail.com',
+          cc: 'mauricioperez.29@hotmail.com',
+          nombre: formState.nombre,
+          empresa: formState.empresa,
+          cargo: formState.cargo,
+          email: formState.email,
+          telefono: formState.telefono,
+          tipo_proyecto: formState.tipoProyecto,
+          metros_cuadrados: formState.metros || 'No especificado',
+          mensaje: formState.mensaje || 'Sin mensaje adicional',
+        }),
       })
-    }, 3000)
+
+      const data = await response.json()
+      
+      if (data.success) {
+        setIsSubmitted(true)
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setFormState({
+            nombre: '',
+            empresa: '',
+            cargo: '',
+            email: '',
+            telefono: '',
+            tipoProyecto: '',
+            metros: '',
+            mensaje: '',
+          })
+        }, 3000)
+      }
+    } catch (error) {
+      console.error('Error enviando formulario:', error)
+      alert('Hubo un error al enviar el formulario. Por favor intenta de nuevo.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
