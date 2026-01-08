@@ -43,7 +43,7 @@ export default function CTAFinal() {
               href="mailto:mauricioperez.29@hotmail.com?subject=Consulta%20PERCORP%20-%20Reunión%20con%20Dirección"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary bg-white text-accent hover:bg-gray-100 text-lg px-10 py-5"
+              className="inline-flex items-center justify-center bg-blue-600 text-white hover:bg-blue-700 text-lg px-10 py-5 rounded-lg font-medium transition-colors"
             >
               Agendar reunión con Dirección
             </motion.a>
@@ -52,7 +52,7 @@ export default function CTAFinal() {
               href="#empresas"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-secondary border-white text-white hover:bg-white hover:text-accent text-lg px-10 py-5"
+              className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-black text-lg px-10 py-5 rounded-lg font-medium transition-colors"
             >
               Conocer las empresas PERCORP
             </motion.a>
