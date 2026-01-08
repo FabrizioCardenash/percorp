@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Zap, Shield, BarChart3, ArrowRight } from 'lucide-react'
+import { Waves } from '@/components/ui/wave-background'
 
 const bullets = [
   {
@@ -24,28 +25,29 @@ const bullets = [
 export default function EnergiaHero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-black pt-28">
-      {/* Background pattern */}
+      {/* Wave Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/20 via-black to-black" />
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f59e0b' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
-        {/* Animated glow */}
-        <motion.div
-          className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
-          }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        <Waves
+          strokeColor="#FBBF24"
+          backgroundColor="transparent"
         />
       </div>
+      
+      {/* Gradient overlay for depth */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/60 via-black/40 to-black/80 pointer-events-none" />
+      
+      {/* Animated glow */}
+      <motion.div
+        className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl z-[1]"
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3]
+        }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       {/* Content */}
-      <div className="relative z-10 container-custom min-h-screen flex flex-col justify-center py-20">
+      <div className="relative z-10 container-custom min-h-screen flex flex-col justify-center py-20 pointer-events-auto">
         <div className="max-w-5xl">
           {/* Badge */}
           <motion.div
@@ -95,7 +97,7 @@ export default function EnergiaHero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="flex items-start gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:border-amber-400/30 transition-colors"
+                className="flex items-start gap-4 p-4 bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl hover:border-amber-400/30 transition-colors"
               >
                 <div className="p-2 bg-amber-400/10 rounded-lg">
                   <bullet.icon className="w-5 h-5 text-amber-400" />
