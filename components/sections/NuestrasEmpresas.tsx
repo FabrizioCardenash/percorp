@@ -127,7 +127,7 @@ export default function NuestrasEmpresas() {
                       Infraestructura inteligente para organizaciones que necesitan continuidad, eficiencia y estandarización.
                     </p>
                     <a 
-                      href="/smart-infrastructure" 
+                      href="/infraestructura" 
                       className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white font-medium hover:bg-white/20 transition-all"
                     >
                       Ver empresa
