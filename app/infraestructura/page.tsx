@@ -4,7 +4,6 @@ import InfraestructuraHero from '@/components/infraestructura/InfraestructuraHer
 import Nosotros from '@/components/infraestructura/Nosotros'
 import Servicios from '@/components/infraestructura/Servicios'
 import PropuestaValor from '@/components/infraestructura/PropuestaValor'
-import MetodologiaInfra from '@/components/infraestructura/MetodologiaInfra'
 import SectoresInfra from '@/components/infraestructura/SectoresInfra'
 import Soluciones from '@/components/infraestructura/Soluciones'
 import Proyectos from '@/components/infraestructura/Proyectos'
@@ -33,7 +32,6 @@ export default function InfraestructuraPage() {
         <Nosotros />
         <Servicios />
         <PropuestaValor />
-        <MetodologiaInfra />
         <SectoresInfra />
         <Soluciones />
         <Proyectos />
