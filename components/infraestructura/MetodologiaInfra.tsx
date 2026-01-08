@@ -66,7 +66,7 @@ export default function MetodologiaInfra() {
               className="hidden md:block"
             >
               <Image
-                src="/imagenes web/logo percorp.png"
+                src="/imagenes web/logo white percorp.png"
                 alt="PERCORP Logo"
                 width={120}
                 height={80}
