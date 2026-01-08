@@ -138,7 +138,7 @@ export default function ContactoInfra() {
             >
               <p className="text-white/50 font-body text-sm mb-3">¿Prefieres escribirnos directamente?</p>
               <a
-                href="https://wa.me/51999999999?text=Hola, me interesa el servicio de infraestructura de PERCORP"
+                href="https://wa.me/51979035486?text=Hola, me interesa el servicio de infraestructura de PERCORP"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-body font-medium rounded-lg transition-colors"
