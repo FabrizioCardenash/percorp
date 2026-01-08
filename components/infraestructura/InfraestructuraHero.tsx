@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Building2, TrendingDown, Eye, ArrowRight } from 'lucide-react'
-import { Waves } from '@/components/ui/waves'
+import { Waves } from '@/components/ui/wave-background'
 
 const bullets = [
   {
