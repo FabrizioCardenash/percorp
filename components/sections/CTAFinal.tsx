@@ -40,7 +40,7 @@ export default function CTAFinal() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <motion.a
-              href="mailto:direccion@percorp.com"
+              href="mailto:mauricioperez.29@hotmail.com?subject=Consulta%20PERCORP%20-%20Reunión%20con%20Dirección"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn-primary bg-white text-accent hover:bg-gray-100 text-lg px-10 py-5"
@@ -68,10 +68,10 @@ export default function CTAFinal() {
               ¿Prefieres escribirnos directamente?
             </p>
             <a 
-              href="mailto:direccion@percorp.com" 
+              href="mailto:mauricioperez.29@hotmail.com" 
               className="text-2xl font-semibold hover:underline"
             >
-              direccion@percorp.com
+              mauricioperez.29@hotmail.com
             </a>
           </motion.div>
         </motion.div>
