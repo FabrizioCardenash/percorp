@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Zap, Shield, BarChart3, ArrowRight } from 'lucide-react'
 import { Waves } from '@/components/ui/wave-background'
+import { VerticalCutReveal } from '@/components/ui/vertical-cut-reveal'
 
 const bullets = [
   {
@@ -60,17 +61,54 @@ export default function EnergiaHero() {
             <span className="text-sm font-body text-amber-400">PERCORP Energía</span>
           </motion.div>
 
-          {/* H1 */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white mb-8 leading-tight"
-          >
-            Gestión inteligente para operar{' '}
-            <span className="text-amber-400">sin interrupciones</span>{' '}
-            y con eficiencia en costos.
-          </motion.h1>
+          {/* H1 con animación */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white mb-8 leading-tight">
+            <VerticalCutReveal
+              splitBy="words"
+              staggerDuration={0.08}
+              staggerFrom="first"
+              transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 25,
+                delay: 0.3,
+              }}
+              containerClassName="flex flex-wrap"
+              elementLevelClassName="text-white"
+            >
+              Gestión inteligente para operar
+            </VerticalCutReveal>
+            <VerticalCutReveal
+              splitBy="words"
+              staggerDuration={0.08}
+              staggerFrom="first"
+              transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 25,
+                delay: 0.8,
+              }}
+              containerClassName="flex flex-wrap"
+              elementLevelClassName="text-amber-400"
+            >
+              sin interrupciones
+            </VerticalCutReveal>
+            <VerticalCutReveal
+              splitBy="words"
+              staggerDuration={0.08}
+              staggerFrom="first"
+              transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 25,
+                delay: 1.2,
+              }}
+              containerClassName="flex flex-wrap"
+              elementLevelClassName="text-white"
+            >
+              y con eficiencia en costos.
+            </VerticalCutReveal>
+          </h1>
 
           {/* Subtítulo */}
           <motion.p
