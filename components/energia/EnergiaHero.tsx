@@ -81,7 +81,7 @@ export default function EnergiaHero() {
             <VerticalCutReveal
               splitBy="words"
               staggerDuration={0.08}
-              staggerFrom="first"
+              staggerFrom="last"
               transition={{
                 type: "spring",
                 stiffness: 200,
@@ -96,7 +96,7 @@ export default function EnergiaHero() {
             <VerticalCutReveal
               splitBy="words"
               staggerDuration={0.08}
-              staggerFrom="first"
+              staggerFrom="center"
               transition={{
                 type: "spring",
                 stiffness: 200,
