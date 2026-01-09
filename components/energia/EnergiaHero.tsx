@@ -77,7 +77,7 @@ export default function EnergiaHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/70 font-body mb-12 max-w-3xl leading-relaxed"
+            className="text-lg md:text-xl text-white/90 font-body mb-12 max-w-3xl leading-relaxed"
           >
             Diseñamos e implementamos infraestructura eléctrica, medición avanzada y optimización 
             energética con enfoque llave en mano. Convertimos consumo y continuidad en una ventaja 
