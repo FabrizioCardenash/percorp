@@ -67,9 +67,9 @@ export default function EnergiaHero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-white mb-8 leading-tight"
           >
-            Energía inteligente para operar{' '}
+            Gestión inteligente para operar{' '}
             <span className="text-amber-400">sin interrupciones</span>{' '}
-            y con costos bajo control.
+            y con eficiencia en costos.
           </motion.h1>
 
           {/* Subtítulo */}
