@@ -49,7 +49,7 @@ export default function MetodologiaData() {
     <section id="metodologia" ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#103D96]/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -59,7 +59,7 @@ export default function MetodologiaData() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-pink-400 font-body text-sm tracking-widest uppercase mb-4"
+            className="inline-block text-[#1E5BBF] font-body text-sm tracking-widest uppercase mb-4"
           >
             Metodología
           </motion.span>
@@ -71,7 +71,7 @@ export default function MetodologiaData() {
             className="text-4xl md:text-5xl font-heading font-bold mb-6"
           >
             Data-to-Value{' '}
-            <span className="text-pink-400">Framework</span>
+            <span className="text-[#1E5BBF]">Framework</span>
           </motion.h2>
 
           <motion.p
@@ -87,7 +87,7 @@ export default function MetodologiaData() {
         {/* Steps */}
         <div className="relative">
           {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pink-500/30 to-transparent" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#103D96]/30 to-transparent" />
 
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {steps.map((step, index) => (
@@ -99,12 +99,12 @@ export default function MetodologiaData() {
                 className="relative text-center"
               >
                 {/* Number badge */}
-                <div className="relative z-10 w-16 h-16 mx-auto mb-4 bg-black border-2 border-pink-500 rounded-full flex items-center justify-center">
-                  <step.icon className="w-7 h-7 text-pink-400" />
+                <div className="relative z-10 w-16 h-16 mx-auto mb-4 bg-black border-2 border-[#103D96] rounded-full flex items-center justify-center">
+                  <step.icon className="w-7 h-7 text-[#1E5BBF]" />
                 </div>
 
                 {/* Duration */}
-                <span className="inline-block px-3 py-1 bg-pink-500/10 text-pink-400 text-xs font-body rounded-full mb-3">
+                <span className="inline-block px-3 py-1 bg-[#103D96]/10 text-[#1E5BBF] text-xs font-body rounded-full mb-3">
                   {step.duration}
                 </span>
 

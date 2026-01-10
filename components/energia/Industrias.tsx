@@ -49,7 +49,7 @@ export default function Industrias() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-amber-400 font-body text-sm tracking-widest uppercase mb-4"
+            className="inline-block text-[#FFC700] font-body text-sm tracking-widest uppercase mb-4"
           >
             Sectores
           </motion.span>
@@ -61,7 +61,7 @@ export default function Industrias() {
             className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6"
           >
             Diseñado para operaciones que{' '}
-            <span className="text-amber-400">no se pueden detener</span>
+            <span className="text-[#FFC700]">no se pueden detener</span>
           </motion.h2>
         </div>
 
@@ -73,14 +73,14 @@ export default function Industrias() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="group relative bg-white/5 border border-white/10 rounded-xl p-6 hover:border-amber-400/30 hover:bg-white/10 transition-all duration-300"
+              className="group relative bg-white/5 border border-white/10 rounded-xl p-6 hover:border-[#FFC700]/30 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-amber-400/10 rounded-xl group-hover:bg-amber-400/20 transition-colors">
-                  <industria.icon className="w-6 h-6 text-amber-400" />
+                <div className="p-3 bg-[#FFC700]/10 rounded-xl group-hover:bg-[#FFC700]/20 transition-colors">
+                  <industria.icon className="w-6 h-6 text-[#FFC700]" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-heading font-semibold text-white mb-1 group-hover:text-amber-400 transition-colors">
+                  <h3 className="text-lg font-heading font-semibold text-white mb-1 group-hover:text-[#FFC700] transition-colors">
                     {industria.nombre}
                   </h3>
                   <p className="text-sm text-white/50 font-body">
@@ -97,7 +97,7 @@ export default function Industrias() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="text-center text-amber-400/80 font-body text-sm mt-12 max-w-xl mx-auto"
+          className="text-center text-[#FFC700]/80 font-body text-sm mt-12 max-w-xl mx-auto"
         >
           "Si tienes operación 24/7 o penalidades por interrupción, esta página es para ti."
         </motion.p>

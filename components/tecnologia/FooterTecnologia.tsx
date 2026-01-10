@@ -12,7 +12,7 @@ export default function FooterTecnologia() {
           <div className="text-center md:text-left">
             <Link href="/" className="inline-flex items-center gap-2 mb-2">
               <span className="text-xl font-heading font-bold text-white">PERCORP</span>
-              <span className="text-sm font-body text-pink-400">TECNOLOGÍA</span>
+              <span className="text-sm font-body text-[#1E5BBF]">TECNOLOGÍA</span>
             </Link>
             <p className="text-white/50 font-body text-sm">
               Data Analytics & Dashboards | Microsoft Fabric/Azure
@@ -25,13 +25,13 @@ export default function FooterTecnologia() {
               href="https://linkedin.com/company/percorp"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/50 hover:text-pink-400 transition-colors"
+              className="text-white/50 hover:text-[#1E5BBF] transition-colors"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href="mailto:tecnologia@percorp.com.pe"
-              className="text-white/50 hover:text-pink-400 transition-colors"
+              className="text-white/50 hover:text-[#1E5BBF] transition-colors"
             >
               <Mail className="w-5 h-5" />
             </a>

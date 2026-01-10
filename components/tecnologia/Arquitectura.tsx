@@ -38,7 +38,7 @@ const capabilities = [
 ]
 
 const colorClasses = {
-  pink: { bg: 'bg-pink-500/10', border: 'border-pink-500/30', text: 'text-pink-400', iconBg: 'bg-pink-500/20' },
+  pink: { bg: 'bg-[#103D96]/10', border: 'border-[#103D96]/30', text: 'text-[#1E5BBF]', iconBg: 'bg-[#103D96]/20' },
   blue: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', text: 'text-blue-400', iconBg: 'bg-blue-500/20' },
   green: { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-400', iconBg: 'bg-green-500/20' },
 }
@@ -55,7 +55,7 @@ export default function Arquitectura() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-pink-400 font-body text-sm tracking-widest uppercase mb-4"
+            className="inline-block text-[#1E5BBF] font-body text-sm tracking-widest uppercase mb-4"
           >
             Arquitectura
           </motion.span>
@@ -67,7 +67,7 @@ export default function Arquitectura() {
             className="text-4xl md:text-5xl font-heading font-bold mb-6"
           >
             Bloques de{' '}
-            <span className="text-pink-400">capacidades</span>
+            <span className="text-[#1E5BBF]">capacidades</span>
           </motion.h2>
 
           <motion.p

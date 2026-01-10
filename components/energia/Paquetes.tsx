@@ -55,7 +55,7 @@ export default function Paquetes() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-amber-400 font-body text-sm tracking-widest uppercase mb-4"
+            className="inline-block text-[#FFC700] font-body text-sm tracking-widest uppercase mb-4"
           >
             Paquetes Comerciales
           </motion.span>
@@ -80,29 +80,29 @@ export default function Paquetes() {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
               className={`relative rounded-2xl p-8 ${
                 paquete.destacado 
-                  ? 'bg-gradient-to-b from-amber-400/20 to-amber-400/5 border-2 border-amber-400/50' 
+                  ? 'bg-gradient-to-b from-[#FFC700]/20 to-[#FFC700]/5 border-2 border-[#FFC700]/50' 
                   : 'bg-white/5 border border-white/10'
               }`}
             >
               {/* Badge para destacado */}
               {paquete.destacado && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1 bg-amber-400 text-black text-xs font-body font-semibold rounded-full">
+                  <span className="px-4 py-1 bg-[#FFC700] text-black text-xs font-body font-semibold rounded-full">
                     Más popular
                   </span>
                 </div>
               )}
 
               {/* Icon */}
-              <div className={`inline-flex p-3 rounded-xl ${paquete.destacado ? 'bg-amber-400' : 'bg-white/10'} mb-6`}>
-                <paquete.icon className={`w-6 h-6 ${paquete.destacado ? 'text-black' : 'text-amber-400'}`} />
+              <div className={`inline-flex p-3 rounded-xl ${paquete.destacado ? 'bg-[#FFC700]' : 'bg-white/10'} mb-6`}>
+                <paquete.icon className={`w-6 h-6 ${paquete.destacado ? 'text-black' : 'text-[#FFC700]'}`} />
               </div>
 
               {/* Header */}
               <h3 className="text-xl md:text-2xl font-heading font-bold text-white mb-2">
                 {paquete.nombre}
               </h3>
-              <p className="text-amber-400 font-body text-sm mb-4">{paquete.tiempo}</p>
+              <p className="text-[#FFC700] font-body text-sm mb-4">{paquete.tiempo}</p>
 
               {/* Descripción */}
               <p className="text-white/60 font-body mb-6">
@@ -113,7 +113,7 @@ export default function Paquetes() {
               <ul className="space-y-3 mb-6">
                 {paquete.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-[#FFC700] flex-shrink-0 mt-0.5" />
                     <span className="text-white/70 font-body text-sm">{feature}</span>
                   </li>
                 ))}
@@ -130,7 +130,7 @@ export default function Paquetes() {
                 href="#contacto"
                 className={`mt-6 w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium font-body rounded-lg transition-all duration-300 ${
                   paquete.destacado
-                    ? 'bg-amber-400 text-black hover:bg-amber-300'
+                    ? 'bg-[#FFC700] text-black hover:bg-[#FFD633]'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}
               >

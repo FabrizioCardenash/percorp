@@ -40,11 +40,11 @@ function FAQItem({ pregunta, respuesta, isOpen, onClick }: {
         onClick={onClick}
         className="w-full py-6 flex items-center justify-between text-left group"
       >
-        <span className="text-lg font-heading font-semibold text-white group-hover:text-amber-400 transition-colors pr-4">
+        <span className="text-lg font-heading font-semibold text-white group-hover:text-[#FFC700] transition-colors pr-4">
           {pregunta}
         </span>
         <ChevronDown 
-          className={`w-5 h-5 text-amber-400 flex-shrink-0 transition-transform duration-300 ${
+          className={`w-5 h-5 text-[#FFC700] flex-shrink-0 transition-transform duration-300 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
@@ -75,7 +75,7 @@ export default function FAQ() {
   return (
     <section id="faqs" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-amber-400/5 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#FFC700]/5 to-transparent pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
@@ -85,7 +85,7 @@ export default function FAQ() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-amber-400 font-body text-sm tracking-widest uppercase mb-4"
+              className="inline-block text-[#FFC700] font-body text-sm tracking-widest uppercase mb-4"
             >
               Preguntas Frecuentes
             </motion.span>
@@ -97,7 +97,7 @@ export default function FAQ() {
               className="text-4xl md:text-5xl font-heading font-bold mb-6"
             >
               ¿Tienes dudas?{' '}
-              <span className="text-amber-400">Aquí respondemos</span>
+              <span className="text-[#FFC700]">Aquí respondemos</span>
             </motion.h2>
             
             <motion.p

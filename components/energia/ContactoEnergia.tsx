@@ -67,8 +67,8 @@ export default function ContactoEnergia() {
     <section id="contacto" ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-900 to-black text-white overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-amber-400/5 rounded-full blur-2xl" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#FFC700]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-[#FFC700]/5 rounded-full blur-2xl" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -79,7 +79,7 @@ export default function ContactoEnergia() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-amber-400 font-body text-sm tracking-widest uppercase mb-4"
+              className="inline-block text-[#FFC700] font-body text-sm tracking-widest uppercase mb-4"
             >
               Contacto
             </motion.span>
@@ -91,7 +91,7 @@ export default function ContactoEnergia() {
               className="text-4xl md:text-5xl font-heading font-bold mb-6"
             >
               Solicita un{' '}
-              <span className="text-amber-400">diagnóstico inicial</span>
+              <span className="text-[#FFC700]">diagnóstico inicial</span>
             </motion.h2>
             
             <motion.p
@@ -113,14 +113,14 @@ export default function ContactoEnergia() {
               className="space-y-4 mb-8"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-amber-400/10 rounded-lg">
-                  <Clock className="w-5 h-5 text-amber-400" />
+                <div className="p-2 bg-[#FFC700]/10 rounded-lg">
+                  <Clock className="w-5 h-5 text-[#FFC700]" />
                 </div>
                 <span className="text-white/80 font-body">Respuesta en menos de 24 horas</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-amber-400/10 rounded-lg">
-                  <CheckCircle className="w-5 h-5 text-amber-400" />
+                <div className="p-2 bg-[#FFC700]/10 rounded-lg">
+                  <CheckCircle className="w-5 h-5 text-[#FFC700]" />
                 </div>
                 <span className="text-white/80 font-body">Sin compromiso, evaluación gratuita</span>
               </div>
@@ -164,7 +164,7 @@ export default function ContactoEnergia() {
                     required
                     value={formState.nombre}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-amber-400/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#FFC700]/50 transition-colors"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -179,7 +179,7 @@ export default function ContactoEnergia() {
                     required
                     value={formState.empresa}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-amber-400/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#FFC700]/50 transition-colors"
                     placeholder="Nombre de tu empresa"
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function ContactoEnergia() {
                     required
                     value={formState.cargo}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-amber-400/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#FFC700]/50 transition-colors"
                     placeholder="Tu cargo"
                   />
                 </div>
@@ -212,7 +212,7 @@ export default function ContactoEnergia() {
                     required
                     value={formState.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-amber-400/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#FFC700]/50 transition-colors"
                     placeholder="tu@empresa.com"
                   />
                 </div>
@@ -230,7 +230,7 @@ export default function ContactoEnergia() {
                     required
                     value={formState.telefono}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-amber-400/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#FFC700]/50 transition-colors"
                     placeholder="+51 999 999 999"
                   />
                 </div>
@@ -245,7 +245,7 @@ export default function ContactoEnergia() {
                     required
                     value={formState.ciudad}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-amber-400/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#FFC700]/50 transition-colors"
                     placeholder="Lima, Arequipa, etc."
                   />
                 </div>
@@ -261,7 +261,7 @@ export default function ContactoEnergia() {
                   required
                   value={formState.tipoOperacion}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-amber-400/50 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-[#FFC700]/50 transition-colors"
                 >
                   <option value="" className="bg-gray-900">Selecciona una opción</option>
                   {tiposOperacion.map(tipo => (
@@ -280,7 +280,7 @@ export default function ContactoEnergia() {
                   rows={3}
                   value={formState.mensaje}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-amber-400/50 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#FFC700]/50 transition-colors resize-none"
                   placeholder="Costo, continuidad, visibilidad, expansión..."
                 />
               </div>
@@ -291,7 +291,7 @@ export default function ContactoEnergia() {
                 className={`w-full flex items-center justify-center gap-2 px-6 py-4 font-body font-medium rounded-lg transition-all duration-300 ${
                   isSubmitted
                     ? 'bg-green-500 text-white'
-                    : 'bg-amber-400 text-black hover:bg-amber-300'
+                    : 'bg-[#FFC700] text-black hover:bg-[#FFD633]'
                 } disabled:opacity-70`}
               >
                 {isSubmitting ? (

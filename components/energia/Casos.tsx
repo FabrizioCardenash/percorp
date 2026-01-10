@@ -19,7 +19,7 @@ const casos = [
     problema: 'Riesgo de interrupción.',
     solucion: 'Rediseño + respaldo + pruebas.',
     resultado: 'Reducción del riesgo operacional.',
-    color: 'from-amber-500 to-orange-500',
+    color: 'from-[#FFC700] to-orange-500',
   },
   {
     icon: TrendingDown,

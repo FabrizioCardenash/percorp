@@ -38,7 +38,7 @@ export default function CapaDigital() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-amber-400 font-body text-sm tracking-widest uppercase mb-4"
+              className="inline-block text-[#FFC700] font-body text-sm tracking-widest uppercase mb-4"
             >
               Diferenciador PERCORP
             </motion.span>
@@ -50,7 +50,7 @@ export default function CapaDigital() {
               className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6"
             >
               La diferencia PERCORP:{' '}
-              <span className="text-amber-400">energía gobernada por datos</span>
+              <span className="text-[#FFC700]">energía gobernada por datos</span>
             </motion.h2>
 
             <motion.p
@@ -78,8 +78,8 @@ export default function CapaDigital() {
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="p-2 bg-amber-400/10 rounded-lg flex-shrink-0">
-                    <cap.icon className="w-5 h-5 text-amber-400" />
+                  <div className="p-2 bg-[#FFC700]/10 rounded-lg flex-shrink-0">
+                    <cap.icon className="w-5 h-5 text-[#FFC700]" />
                   </div>
                   <span className="text-white/80 font-body">{cap.text}</span>
                 </motion.li>
@@ -94,7 +94,7 @@ export default function CapaDigital() {
             >
               <a
                 href="#contacto"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-amber-400 text-black font-body font-medium rounded-lg hover:bg-amber-300 transition-colors group"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#FFC700] text-black font-body font-medium rounded-lg hover:bg-[#FFD633] transition-colors group"
               >
                 Ver ejemplo de tablero (demo)
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -113,7 +113,7 @@ export default function CapaDigital() {
               {/* Dashboard header */}
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-amber-400 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#FFC700] rounded-lg flex items-center justify-center">
                     <Cpu className="w-5 h-5 text-black" />
                   </div>
                   <div>
@@ -136,7 +136,7 @@ export default function CapaDigital() {
                 </div>
                 <div className="bg-white/5 rounded-lg p-4">
                   <p className="text-white/50 text-xs font-body mb-1">Eficiencia</p>
-                  <p className="text-2xl font-heading font-bold text-amber-400">94.2%</p>
+                  <p className="text-2xl font-heading font-bold text-[#FFC700]">94.2%</p>
                   <p className="text-xs text-white/40 font-body">Factor de potencia</p>
                 </div>
                 <div className="bg-white/5 rounded-lg p-4">
@@ -152,14 +152,14 @@ export default function CapaDigital() {
                   <p className="text-white/70 text-sm font-body">Consumo por Zona</p>
                   <div className="flex gap-2">
                     <span className="text-xs text-white/40 font-body px-2 py-1 bg-white/5 rounded">24h</span>
-                    <span className="text-xs text-amber-400 font-body px-2 py-1 bg-amber-400/10 rounded">7d</span>
+                    <span className="text-xs text-[#FFC700] font-body px-2 py-1 bg-[#FFC700]/10 rounded">7d</span>
                   </div>
                 </div>
                 <div className="h-32 flex items-end justify-between gap-2">
                   {['Producción', 'Oficinas', 'Almacén', 'HVAC', 'Iluminación'].map((zona, i) => (
                     <div key={zona} className="flex-1 flex flex-col items-center gap-2">
                       <div 
-                        className="w-full bg-gradient-to-t from-amber-400 to-amber-400/30 rounded-t"
+                        className="w-full bg-gradient-to-t from-[#FFC700] to-[#FFC700]/30 rounded-t"
                         style={{ height: `${[75, 45, 60, 80, 35][i]}%` }}
                       />
                       <span className="text-[10px] text-white/40 font-body">{zona}</span>
@@ -170,8 +170,8 @@ export default function CapaDigital() {
 
               {/* Alerts */}
               <div className="space-y-2">
-                <div className="flex items-center gap-3 p-3 bg-amber-400/10 border border-amber-400/20 rounded-lg">
-                  <Bell className="w-4 h-4 text-amber-400" />
+                <div className="flex items-center gap-3 p-3 bg-[#FFC700]/10 border border-[#FFC700]/20 rounded-lg">
+                  <Bell className="w-4 h-4 text-[#FFC700]" />
                   <span className="text-xs text-white/70 font-body">Demanda cerca del límite en Zona A</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-green-400/10 border border-green-400/20 rounded-lg">
@@ -182,8 +182,8 @@ export default function CapaDigital() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-amber-400/20 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-amber-400/10 rounded-full blur-3xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#FFC700]/20 rounded-full blur-2xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-[#FFC700]/10 rounded-full blur-3xl" />
           </motion.div>
         </div>
       </div>

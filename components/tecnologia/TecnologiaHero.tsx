@@ -18,7 +18,7 @@ export default function TecnologiaHero() {
       {/* Wave Background */}
       <div className="absolute inset-0 z-0">
         <Waves
-          strokeColor="#EC4899"
+          strokeColor="#103D96"
           backgroundColor="transparent"
         />
       </div>
@@ -28,7 +28,7 @@ export default function TecnologiaHero() {
       
       {/* Animated glow */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl z-[1]"
+        className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#103D96]/10 rounded-full blur-3xl z-[1]"
         animate={{ 
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3]
@@ -44,10 +44,10 @@ export default function TecnologiaHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#103D96]/10 border border-[#103D96]/30 rounded-full mb-8"
           >
-            <BarChart2 className="w-4 h-4 text-pink-400" />
-            <span className="text-sm font-body text-pink-400">PERCORP Tecnología | Data Analytics</span>
+            <BarChart2 className="w-4 h-4 text-[#1E5BBF]" />
+            <span className="text-sm font-body text-[#1E5BBF]">PERCORP Tecnología | Data Analytics</span>
           </motion.div>
 
           {/* H1 con animación */}
@@ -78,7 +78,7 @@ export default function TecnologiaHero() {
                 delay: 0.9,
               }}
               containerClassName="flex flex-wrap"
-              elementLevelClassName="text-pink-400"
+              elementLevelClassName="text-[#1E5BBF]"
             >
               dashboards, analítica y control operativo
             </VerticalCutReveal>
@@ -122,7 +122,7 @@ export default function TecnologiaHero() {
                 key={index}
                 className="flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full"
               >
-                <feature.icon className="w-4 h-4 text-pink-400" />
+                <feature.icon className="w-4 h-4 text-[#1E5BBF]" />
                 <span className="text-sm text-white/70 font-body">{feature.text}</span>
               </div>
             ))}
@@ -137,7 +137,7 @@ export default function TecnologiaHero() {
           >
             <a
               href="#contacto"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium font-body text-white bg-pink-500 hover:bg-pink-400 transition-all duration-300 rounded-lg shadow-lg hover:shadow-pink-500/20 hover:shadow-xl group"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium font-body text-white bg-[#103D96] hover:bg-[#1E5BBF] transition-all duration-300 rounded-lg shadow-lg hover:shadow-[#103D96]/20 hover:shadow-xl group"
             >
               Agendar sesión de diagnóstico
               <span className="text-sm text-white/70">(30 min)</span>
@@ -174,7 +174,7 @@ export default function TecnologiaHero() {
             <div className="grid grid-cols-3 gap-3 mb-4">
               <div className="bg-black/30 rounded-lg p-3">
                 <p className="text-xs text-white/50 font-body mb-1">MTTR</p>
-                <p className="text-xl font-heading font-bold text-pink-400">2.4h</p>
+                <p className="text-xl font-heading font-bold text-[#1E5BBF]">2.4h</p>
                 <p className="text-xs text-green-400 font-body">↓ 18%</p>
               </div>
               <div className="bg-black/30 rounded-lg p-3">
@@ -185,7 +185,7 @@ export default function TecnologiaHero() {
               <div className="bg-black/30 rounded-lg p-3">
                 <p className="text-xs text-white/50 font-body mb-1">Incidentes</p>
                 <p className="text-xl font-heading font-bold text-white">12</p>
-                <p className="text-xs text-pink-400 font-body">Este mes</p>
+                <p className="text-xs text-[#1E5BBF] font-body">Este mes</p>
               </div>
             </div>
 
@@ -196,7 +196,7 @@ export default function TecnologiaHero() {
                 {[35, 50, 42, 65, 48, 72, 55, 40, 58, 45, 30, 25].map((height, i) => (
                   <div
                     key={i}
-                    className="flex-1 bg-gradient-to-t from-pink-500 to-pink-400/50 rounded-t"
+                    className="flex-1 bg-gradient-to-t from-[#103D96] to-[#1E5BBF]/50 rounded-t"
                     style={{ height: `${height}%` }}
                   />
                 ))}
@@ -211,16 +211,16 @@ export default function TecnologiaHero() {
                   <span className="text-xs text-green-400">Óptimo</span>
                 </div>
                 <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-pink-500 to-pink-400 rounded-full" style={{ width: '78%' }} />
+                  <div className="h-full bg-gradient-to-r from-[#103D96] to-[#1E5BBF] rounded-full" style={{ width: '78%' }} />
                 </div>
               </div>
               <div className="bg-black/30 rounded-lg p-3">
                 <div className="flex items-center justify-between mb-2">
                   <p className="text-xs text-white/50 font-body">Calidad datos</p>
-                  <span className="text-xs text-pink-400">92%</span>
+                  <span className="text-xs text-[#1E5BBF]">92%</span>
                 </div>
                 <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-pink-500 to-pink-400 rounded-full" style={{ width: '92%' }} />
+                  <div className="h-full bg-gradient-to-r from-[#103D96] to-[#1E5BBF] rounded-full" style={{ width: '92%' }} />
                 </div>
               </div>
             </div>

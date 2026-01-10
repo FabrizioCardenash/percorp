@@ -16,7 +16,7 @@ export default function BarraConfianza() {
   const [ref, isInView] = useInView({ threshold: 0.3 })
 
   return (
-    <section ref={ref} className="relative py-16 bg-gradient-to-r from-amber-400 to-amber-500 overflow-hidden">
+    <section ref={ref} className="relative py-16 bg-gradient-to-r from-[#FFC700] to-[#FFC700] overflow-hidden">
       {/* Pattern overlay */}
       <div 
         className="absolute inset-0 opacity-10"

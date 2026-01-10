@@ -44,7 +44,7 @@ export default function EnergiaHeader() {
               <span className="text-xl md:text-2xl font-heading font-bold text-white">
                 PERCORP
               </span>
-              <span className="text-xs md:text-sm font-body text-amber-400 tracking-wider">
+              <span className="text-xs md:text-sm font-body text-[#FFC700] tracking-wider">
                 ENERGÍA
               </span>
             </Link>
@@ -66,7 +66,7 @@ export default function EnergiaHeader() {
             <div className="flex items-center gap-4">
               <a
                 href="#contacto"
-                className="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium font-body text-black bg-amber-400 hover:bg-amber-300 transition-all duration-300 rounded-lg"
+                className="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium font-body text-black bg-[#FFC700] hover:bg-[#FFD633] transition-all duration-300 rounded-lg"
               >
                 Solicitar diagnóstico
               </a>
@@ -106,7 +106,7 @@ export default function EnergiaHeader() {
                 <a
                   href="#contacto"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium font-body text-black bg-amber-400 hover:bg-amber-300 transition-all duration-300 rounded-lg mt-4"
+                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium font-body text-black bg-[#FFC700] hover:bg-[#FFD633] transition-all duration-300 rounded-lg mt-4"
                 >
                   Solicitar diagnóstico
                 </a>

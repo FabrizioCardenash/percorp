@@ -45,7 +45,7 @@ export default function QueEntregamos() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-pink-400 font-body text-sm tracking-widest uppercase mb-4"
+              className="inline-block text-[#1E5BBF] font-body text-sm tracking-widest uppercase mb-4"
             >
               Qué entregamos
             </motion.span>
@@ -57,7 +57,7 @@ export default function QueEntregamos() {
               className="text-4xl md:text-5xl font-heading font-bold mb-6"
             >
               Outputs{' '}
-              <span className="text-pink-400">concretos</span>
+              <span className="text-[#1E5BBF]">concretos</span>
             </motion.h2>
 
             <motion.p
@@ -93,10 +93,10 @@ export default function QueEntregamos() {
                 initial={{ opacity: 0, x: 30 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="group flex items-start gap-4 p-5 bg-white/5 border border-white/10 rounded-xl hover:border-pink-500/30 hover:bg-white/[0.07] transition-all duration-300"
+                className="group flex items-start gap-4 p-5 bg-white/5 border border-white/10 rounded-xl hover:border-[#103D96]/30 hover:bg-white/[0.07] transition-all duration-300"
               >
-                <div className="w-10 h-10 bg-pink-500/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-pink-500/20 transition-colors">
-                  <item.icon className="w-5 h-5 text-pink-400" />
+                <div className="w-10 h-10 bg-[#103D96]/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-[#103D96]/20 transition-colors">
+                  <item.icon className="w-5 h-5 text-[#1E5BBF]" />
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-white mb-1">
@@ -120,7 +120,7 @@ export default function QueEntregamos() {
         >
           <a
             href="#contacto"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-pink-500 text-white font-body font-medium rounded-lg hover:bg-pink-400 transition-colors group"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#103D96] text-white font-body font-medium rounded-lg hover:bg-[#1E5BBF] transition-colors group"
           >
             Quiero una propuesta
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

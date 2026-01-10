@@ -29,7 +29,7 @@ export default function EnergiaHero() {
       {/* Wave Background */}
       <div className="absolute inset-0 z-0">
         <Waves
-          strokeColor="#FBBF24"
+          strokeColor="#FFC700"
           backgroundColor="transparent"
         />
       </div>
@@ -39,7 +39,7 @@ export default function EnergiaHero() {
       
       {/* Animated glow */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl z-[1]"
+        className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#FFC700]/10 rounded-full blur-3xl z-[1]"
         animate={{ 
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3]
@@ -55,10 +55,10 @@ export default function EnergiaHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-amber-400/10 border border-amber-400/30 rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFC700]/10 border border-[#FFC700]/30 rounded-full mb-8"
           >
-            <Zap className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-body text-amber-400">PERCORP Energía</span>
+            <Zap className="w-4 h-4 text-[#FFC700]" />
+            <span className="text-sm font-body text-[#FFC700]">PERCORP Energía</span>
           </motion.div>
 
           {/* H1 con animación */}
@@ -89,7 +89,7 @@ export default function EnergiaHero() {
                 delay: 0.8,
               }}
               containerClassName="flex flex-wrap"
-              elementLevelClassName="text-amber-400"
+              elementLevelClassName="text-[#FFC700]"
             >
               sin interrupciones
             </VerticalCutReveal>
@@ -135,10 +135,10 @@ export default function EnergiaHero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="flex items-start gap-4 p-4 bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl hover:border-amber-400/30 transition-colors"
+                className="flex items-start gap-4 p-4 bg-black/30 backdrop-blur-sm border border-white/10 rounded-xl hover:border-[#FFC700]/30 transition-colors"
               >
-                <div className="p-2 bg-amber-400/10 rounded-lg">
-                  <bullet.icon className="w-5 h-5 text-amber-400" />
+                <div className="p-2 bg-[#FFC700]/10 rounded-lg">
+                  <bullet.icon className="w-5 h-5 text-[#FFC700]" />
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-white mb-1">{bullet.title}</h3>
@@ -157,7 +157,7 @@ export default function EnergiaHero() {
           >
             <a
               href="#contacto"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium font-body text-black bg-amber-400 hover:bg-amber-300 transition-all duration-300 rounded-lg shadow-lg hover:shadow-amber-400/20 hover:shadow-xl group"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium font-body text-black bg-[#FFC700] hover:bg-[#FFD633] transition-all duration-300 rounded-lg shadow-lg hover:shadow-[#FFC700]/20 hover:shadow-xl group"
             >
               Solicitar diagnóstico
               <span className="text-sm text-black/60">(30–60 min)</span>
@@ -194,13 +194,13 @@ export default function EnergiaHero() {
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-black/30 rounded-lg p-4">
                 <p className="text-xs text-white/50 font-body mb-1">Consumo Actual</p>
-                <p className="text-2xl font-heading font-bold text-amber-400">847 kWh</p>
+                <p className="text-2xl font-heading font-bold text-[#FFC700]">847 kWh</p>
                 <p className="text-xs text-green-400 font-body">↓ 12% vs mes anterior</p>
               </div>
               <div className="bg-black/30 rounded-lg p-4">
                 <p className="text-xs text-white/50 font-body mb-1">Demanda Máxima</p>
                 <p className="text-2xl font-heading font-bold text-white">124 kW</p>
-                <p className="text-xs text-amber-400 font-body">Dentro del límite</p>
+                <p className="text-xs text-[#FFC700] font-body">Dentro del límite</p>
               </div>
             </div>
             
@@ -209,7 +209,7 @@ export default function EnergiaHero() {
               {[40, 65, 45, 80, 55, 70, 60, 75, 50, 85, 65, 55].map((height, i) => (
                 <div
                   key={i}
-                  className="flex-1 bg-gradient-to-t from-amber-400 to-amber-400/50 rounded-t"
+                  className="flex-1 bg-gradient-to-t from-[#FFC700] to-[#FFC700]/50 rounded-t"
                   style={{ height: `${height}%` }}
                 />
               ))}
@@ -242,7 +242,7 @@ export default function EnergiaHero() {
           <span className="text-white/50 text-sm font-body mb-3">Descubre más</span>
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
             <motion.div
-              className="w-1 h-3 bg-amber-400 rounded-full"
+              className="w-1 h-3 bg-[#FFC700] rounded-full"
               animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />

@@ -77,7 +77,7 @@ export default function ContactoTecnologia() {
     <section id="contacto" ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#103D96]/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -88,7 +88,7 @@ export default function ContactoTecnologia() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block text-pink-400 font-body text-sm tracking-widest uppercase mb-4"
+              className="inline-block text-[#1E5BBF] font-body text-sm tracking-widest uppercase mb-4"
             >
               Contacto
             </motion.span>
@@ -100,7 +100,7 @@ export default function ContactoTecnologia() {
               className="text-4xl md:text-5xl font-heading font-bold mb-6"
             >
               Trae tus fuentes.{' '}
-              <span className="text-pink-400">Nosotros te devolvemos control.</span>
+              <span className="text-[#1E5BBF]">Nosotros te devolvemos control.</span>
             </motion.h2>
 
             <motion.p
@@ -148,7 +148,7 @@ export default function ContactoTecnologia() {
                     required
                     value={formState.nombre}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-pink-500/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#103D96]/50 transition-colors"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -163,7 +163,7 @@ export default function ContactoTecnologia() {
                     required
                     value={formState.empresa}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-pink-500/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#103D96]/50 transition-colors"
                     placeholder="Nombre de tu empresa"
                   />
                 </div>
@@ -181,7 +181,7 @@ export default function ContactoTecnologia() {
                     required
                     value={formState.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-pink-500/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#103D96]/50 transition-colors"
                     placeholder="tu@empresa.com"
                   />
                 </div>
@@ -195,7 +195,7 @@ export default function ContactoTecnologia() {
                     required
                     value={formState.industria}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-pink-500/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-[#103D96]/50 transition-colors"
                   >
                     <option value="" className="bg-gray-900">Selecciona</option>
                     {industrias.map(ind => (
@@ -216,7 +216,7 @@ export default function ContactoTecnologia() {
                     required
                     value={formState.objetivo}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-pink-500/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-[#103D96]/50 transition-colors"
                   >
                     <option value="" className="bg-gray-900">Selecciona</option>
                     {objetivos.map(obj => (
@@ -234,7 +234,7 @@ export default function ContactoTecnologia() {
                     name="fuentes"
                     value={formState.fuentes}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-pink-500/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#103D96]/50 transition-colors"
                     placeholder="ERP, Excel, APIs..."
                   />
                 </div>
@@ -251,7 +251,7 @@ export default function ContactoTecnologia() {
                     name="usuarios"
                     value={formState.usuarios}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-pink-500/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#103D96]/50 transition-colors"
                     placeholder="Ej: 10-20"
                   />
                 </div>
@@ -264,7 +264,7 @@ export default function ContactoTecnologia() {
                     name="urgencia"
                     value={formState.urgencia}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-pink-500/50 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-[#103D96]/50 transition-colors"
                   >
                     <option value="" className="bg-gray-900">Selecciona</option>
                     <option value="alta" className="bg-gray-900">Alta (< 1 mes)</option>
@@ -284,7 +284,7 @@ export default function ContactoTecnologia() {
                   rows={3}
                   value={formState.mensaje}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-pink-500/50 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body placeholder:text-white/30 focus:outline-none focus:border-[#103D96]/50 transition-colors resize-none"
                   placeholder="Cuéntanos más sobre tu situación actual..."
                 />
               </div>
@@ -295,7 +295,7 @@ export default function ContactoTecnologia() {
                 className={`w-full flex items-center justify-center gap-2 px-6 py-4 font-body font-medium rounded-lg transition-all duration-300 ${
                   isSubmitted
                     ? 'bg-green-500 text-white'
-                    : 'bg-pink-500 text-white hover:bg-pink-400'
+                    : 'bg-[#103D96] text-white hover:bg-[#1E5BBF]'
                 } disabled:opacity-70`}
               >
                 {isSubmitting ? (

@@ -43,7 +43,7 @@ export default function TecnologiaHeader() {
               <span className="text-xl md:text-2xl font-heading font-bold text-white">
                 PERCORP
               </span>
-              <span className="text-xs md:text-sm font-body text-pink-400 tracking-wider">
+              <span className="text-xs md:text-sm font-body text-[#1E5BBF] tracking-wider">
                 TECNOLOGÍA
               </span>
             </Link>
@@ -65,7 +65,7 @@ export default function TecnologiaHeader() {
             <div className="flex items-center gap-4">
               <a
                 href="#contacto"
-                className="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium font-body text-white bg-pink-500 hover:bg-pink-400 transition-all duration-300 rounded-lg"
+                className="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium font-body text-white bg-[#103D96] hover:bg-[#1E5BBF] transition-all duration-300 rounded-lg"
               >
                 Agendar diagnóstico
               </a>
@@ -104,7 +104,7 @@ export default function TecnologiaHeader() {
                 <a
                   href="#contacto"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium font-body text-white bg-pink-500 hover:bg-pink-400 transition-all duration-300 rounded-lg mt-4"
+                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium font-body text-white bg-[#103D96] hover:bg-[#1E5BBF] transition-all duration-300 rounded-lg mt-4"
                 >
                   Agendar diagnóstico
                 </a>

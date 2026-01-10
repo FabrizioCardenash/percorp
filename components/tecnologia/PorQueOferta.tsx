@@ -34,7 +34,7 @@ export default function PorQueOferta() {
     <section id="porque" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#103D96]/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="container-custom relative z-10">
@@ -44,7 +44,7 @@ export default function PorQueOferta() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-pink-400 font-body text-sm tracking-widest uppercase mb-4"
+            className="inline-block text-[#1E5BBF] font-body text-sm tracking-widest uppercase mb-4"
           >
             El problema
           </motion.span>
@@ -56,7 +56,7 @@ export default function PorQueOferta() {
             className="text-4xl md:text-5xl font-heading font-bold mb-6"
           >
             ¿Por qué necesitas{' '}
-            <span className="text-pink-400">analítica real</span>?
+            <span className="text-[#1E5BBF]">analítica real</span>?
           </motion.h2>
 
           <motion.p
@@ -78,10 +78,10 @@ export default function PorQueOferta() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-              className="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-pink-500/30 transition-all duration-300"
+              className="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-[#103D96]/30 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-pink-500/20 transition-colors">
-                <point.icon className="w-6 h-6 text-pink-400" />
+              <div className="w-12 h-12 bg-[#103D96]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#103D96]/20 transition-colors">
+                <point.icon className="w-6 h-6 text-[#1E5BBF]" />
               </div>
               <h3 className="text-xl font-heading font-semibold text-white mb-2">
                 {point.title}

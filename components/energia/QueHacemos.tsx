@@ -21,7 +21,7 @@ const servicios = [
     icon: BarChart3,
     title: 'Medición avanzada y visibilidad (Submetering)',
     description: 'Medidores, sensórica, gateways, telemetría y dashboards para entender consumo por área/activo.',
-    color: 'from-amber-500 to-orange-600',
+    color: 'from-[#FFC700] to-orange-600',
   },
   {
     icon: Sun,
@@ -37,7 +37,7 @@ export default function QueHacemos() {
   return (
     <section id="servicios" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-amber-400/5 to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-[#FFC700]/5 to-transparent pointer-events-none" />
       
       <div className="container-custom relative z-10">
         {/* Header */}
@@ -46,7 +46,7 @@ export default function QueHacemos() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-amber-400 font-body text-sm tracking-widest uppercase mb-4"
+            className="inline-block text-[#FFC700] font-body text-sm tracking-widest uppercase mb-4"
           >
             Propuesta de Valor
           </motion.span>
@@ -80,7 +80,7 @@ export default function QueHacemos() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-amber-400/30 transition-all duration-300 overflow-hidden"
+              className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#FFC700]/30 transition-all duration-300 overflow-hidden"
             >
               {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${servicio.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
@@ -90,7 +90,7 @@ export default function QueHacemos() {
                   <servicio.icon className="w-6 h-6 text-white" />
                 </div>
                 
-                <h3 className="text-xl md:text-2xl font-heading font-bold text-white mb-4 group-hover:text-amber-400 transition-colors">
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-white mb-4 group-hover:text-[#FFC700] transition-colors">
                   {servicio.title}
                 </h3>
                 
@@ -111,7 +111,7 @@ export default function QueHacemos() {
         >
           <a
             href="#contacto"
-            className="inline-flex items-center gap-2 text-amber-400 font-body font-medium hover:text-amber-300 transition-colors group"
+            className="inline-flex items-center gap-2 text-[#FFC700] font-body font-medium hover:text-[#FFD633] transition-colors group"
           >
             Quiero una evaluación inicial
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

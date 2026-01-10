@@ -13,9 +13,9 @@ export default function FooterEnergia() {
           {/* Logo y tagline */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-              <Zap className="w-5 h-5 text-amber-400" />
+              <Zap className="w-5 h-5 text-[#FFC700]" />
               <span className="text-xl font-heading font-bold">
-                PERCORP <span className="text-amber-400">Smart Infrastructure</span>
+                PERCORP <span className="text-[#FFC700]">Smart Infrastructure</span>
               </span>
             </div>
             <p className="text-white/50 font-body text-sm">
@@ -55,7 +55,7 @@ export default function FooterEnergia() {
           <p className="text-white/40 text-sm font-body">
             © {currentYear} PERCORP. Todos los derechos reservados.
           </p>
-          <p className="text-amber-400/60 text-sm font-body font-medium tracking-wider">
+          <p className="text-[#FFC700]/60 text-sm font-body font-medium tracking-wider">
             Engineering + Delivery + Digital Control.
           </p>
         </div>

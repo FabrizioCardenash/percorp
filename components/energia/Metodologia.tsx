@@ -27,7 +27,7 @@ const pasos = [
     titulo: 'Build',
     subtitulo: 'Implementación',
     descripcion: 'Ejecución controlada: calidad, seguridad, pruebas, documentación "as-built".',
-    color: 'from-amber-500 to-orange-500',
+    color: 'from-[#FFC700] to-orange-500',
   },
   {
     numero: '04',

@@ -54,7 +54,7 @@ const categories = [
 ]
 
 const colorClasses = {
-  pink: { bg: 'bg-pink-500/10', border: 'border-pink-500/30', text: 'text-pink-400', icon: 'text-pink-400' },
+  pink: { bg: 'bg-[#103D96]/10', border: 'border-[#103D96]/30', text: 'text-[#1E5BBF]', icon: 'text-[#1E5BBF]' },
   blue: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', text: 'text-blue-400', icon: 'text-blue-400' },
   green: { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-400', icon: 'text-green-400' },
   purple: { bg: 'bg-purple-500/10', border: 'border-purple-500/30', text: 'text-purple-400', icon: 'text-purple-400' },
@@ -72,7 +72,7 @@ export default function CasosDeUso() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-pink-400 font-body text-sm tracking-widest uppercase mb-4"
+            className="inline-block text-[#1E5BBF] font-body text-sm tracking-widest uppercase mb-4"
           >
             Casos de uso
           </motion.span>
@@ -84,7 +84,7 @@ export default function CasosDeUso() {
             className="text-4xl md:text-5xl font-heading font-bold mb-6"
           >
             Analítica aplicada a{' '}
-            <span className="text-pink-400">casos reales</span>
+            <span className="text-[#1E5BBF]">casos reales</span>
           </motion.h2>
 
           <motion.p
