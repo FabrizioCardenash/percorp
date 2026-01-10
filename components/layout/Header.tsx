@@ -10,7 +10,7 @@ const empresas = [
   { name: 'Energía', href: '/energia', description: 'Infraestructura eléctrica y optimización' },
   { name: 'Conectividad', href: '/conectividad', description: 'Redes y comunicaciones' },
   { name: 'Automatización', href: '/automatizacion', description: 'Control y sistemas inteligentes' },
-  { name: 'Tecnología', href: '/tecnologia', description: 'Soluciones enterprise' },
+  { name: 'Tecnología', href: '/tecnologia', description: 'Data Analytics & Dashboards' },
 ]
 
 const navItems = [
