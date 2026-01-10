@@ -236,38 +236,6 @@ export default function EquipamientoHero() {
               </div>
             </div>
 
-            {/* Floating cards */}
-            <motion.div 
-              className="absolute -left-16 top-8 bg-black/80 backdrop-blur-sm border border-[#FF6B00]/30 rounded-xl p-4 shadow-xl"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#FF6B00]/20 rounded-lg flex items-center justify-center">
-                  <Package className="w-5 h-5 text-[#FF6B00]" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-white">Entrega</p>
-                  <p className="text-xs text-white/50">48h configurado</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              className="absolute -right-8 bottom-20 bg-black/80 backdrop-blur-sm border border-green-500/30 rounded-xl p-4 shadow-xl"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
-                  <FileCheck className="w-5 h-5 text-green-400" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-white">As-Built</p>
-                  <p className="text-xs text-white/50">Documentación completa</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
