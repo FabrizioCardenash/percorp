@@ -1,8 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Send, CheckCircle } from 'lucide-react'
 
 const industrias = [
@@ -25,7 +24,8 @@ const objetivos = [
 ]
 
 export default function ContactoTecnologia() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
   const [formState, setFormState] = useState({
     nombre: '',
     empresa: '',
@@ -51,7 +51,6 @@ export default function ContactoTecnologia() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulated submission - replace with actual API call
     await new Promise(resolve => setTimeout(resolve, 1500))
     
     setIsSubmitting(false)
@@ -74,15 +73,13 @@ export default function ContactoTecnologia() {
   }
 
   return (
-    <section id="contacto" ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
-      {/* Background */}
+    <section id="contacto" ref={sectionRef} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#103D96]/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Left column - Info */}
           <div>
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -129,7 +126,6 @@ export default function ContactoTecnologia() {
             </motion.div>
           </div>
 
-          {/* Right column - Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -267,7 +263,7 @@ export default function ContactoTecnologia() {
                     className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white font-body focus:outline-none focus:border-[#103D96]/50 transition-colors"
                   >
                     <option value="" className="bg-gray-900">Selecciona</option>
-                    <option value="alta" className="bg-gray-900">Alta (< 1 mes)</option>
+                    <option value="alta" className="bg-gray-900">Alta (menos de 1 mes)</option>
                     <option value="media" className="bg-gray-900">Media (1-3 meses)</option>
                     <option value="baja" className="bg-gray-900">Baja (explorando)</option>
                   </select>
