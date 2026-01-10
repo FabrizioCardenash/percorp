@@ -5,9 +5,9 @@ interface UseInViewOptions {
   rootMargin?: string
 }
 
-export function useInView(options: UseInViewOptions = {}): [React.RefObject<HTMLElement>, boolean] {
+export function useInView(options: UseInViewOptions = {}): [React.RefObject<HTMLDivElement>, boolean] {
   const [isInView, setIsInView] = useState(false)
-  const ref = useRef<HTMLElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
