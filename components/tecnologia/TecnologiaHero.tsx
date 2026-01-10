@@ -38,7 +38,7 @@ export default function TecnologiaHero() {
 
       {/* Content */}
       <div className="relative z-10 container-custom min-h-screen flex flex-col justify-center py-20 pointer-events-auto">
-        <div className="max-w-5xl">
+        <div className="max-w-4xl xl:max-w-[55%]">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,7 +157,7 @@ export default function TecnologiaHero() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 2.5 }}
-          className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2 w-[520px]"
+          className="hidden xl:block absolute right-8 2xl:right-16 top-1/2 -translate-y-1/2 w-[480px] 2xl:w-[520px]"
         >
           <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-2xl">
             {/* Dashboard header */}
