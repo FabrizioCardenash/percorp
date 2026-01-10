@@ -1,16 +1,17 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 
 export default function ArquitecturaEmpresarial() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const containerRef = useRef<HTMLDivElement>(null)
+  const isInView = useInView(containerRef, { once: true, amount: 0.1 })
 
   return (
     <section id="arquitectura" className="section-padding bg-corporate-gray">
       <div className="container-custom">
         <motion.div
-          ref={ref}
+          ref={containerRef}
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
@@ -75,4 +76,3 @@ export default function ArquitecturaEmpresarial() {
     </section>
   )
 }
-
