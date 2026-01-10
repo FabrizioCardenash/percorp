@@ -1,8 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useState, useRef } from 'react'
+import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
 const faqs = [
@@ -29,11 +28,12 @@ const faqs = [
 ]
 
 export default function FAQEquip() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faqs" ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
+    <section id="faqs" ref={sectionRef} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">

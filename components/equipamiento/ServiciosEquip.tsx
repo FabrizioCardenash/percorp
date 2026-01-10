@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Laptop, Video, Wrench, ArrowRight } from 'lucide-react'
 
 const services = [
@@ -47,10 +47,11 @@ const services = [
 ]
 
 export default function ServiciosEquip() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="servicios" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
+    <section id="servicios" ref={sectionRef} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span

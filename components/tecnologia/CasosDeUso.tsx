@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { 
   AlertCircle, 
   Radio, 
@@ -61,12 +61,12 @@ const colorClasses = {
 }
 
 export default function CasosDeUso() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="casos" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
+    <section id="casos" ref={sectionRef} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="container-custom relative z-10">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,6 @@ export default function CasosDeUso() {
           </motion.p>
         </div>
 
-        {/* Categories grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {categories.map((category, catIndex) => {
             const colors = colorClasses[category.color as keyof typeof colorClasses]
@@ -135,4 +134,3 @@ export default function CasosDeUso() {
     </section>
   )
 }
-

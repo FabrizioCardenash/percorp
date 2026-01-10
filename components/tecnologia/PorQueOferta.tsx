@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { AlertTriangle, Clock, Flame, FileSpreadsheet } from 'lucide-react'
 
 const painPoints = [
@@ -28,17 +28,16 @@ const painPoints = [
 ]
 
 export default function PorQueOferta() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="porque" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
-      {/* Background */}
+    <section id="porque" ref={sectionRef} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#103D96]/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="container-custom relative z-10">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -70,7 +69,6 @@ export default function PorQueOferta() {
           </motion.p>
         </div>
 
-        {/* Pain points grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {painPoints.map((point, index) => (
             <motion.div
@@ -96,4 +94,3 @@ export default function PorQueOferta() {
     </section>
   )
 }
-

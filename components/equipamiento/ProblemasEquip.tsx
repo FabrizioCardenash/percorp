@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { ShoppingCart, Video, Box, Headphones } from 'lucide-react'
 
 const problems = [
@@ -28,10 +28,11 @@ const problems = [
 ]
 
 export default function ProblemasEquip() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="problemas" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
+    <section id="problemas" ref={sectionRef} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#FF6B00]/5 rounded-full blur-[120px]" />
       </div>

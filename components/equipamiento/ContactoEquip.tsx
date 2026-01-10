@@ -1,8 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Send, CheckCircle, Clock } from 'lucide-react'
 
 const necesidades = [
@@ -15,7 +14,8 @@ const necesidades = [
 ]
 
 export default function ContactoEquip() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
   const [formState, setFormState] = useState({
     empresa: '',
     cargo: '',
@@ -63,7 +63,7 @@ export default function ContactoEquip() {
   }
 
   return (
-    <section id="contacto" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
+    <section id="contacto" ref={sectionRef} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#FF6B00]/10 rounded-full blur-[120px]" />
       </div>

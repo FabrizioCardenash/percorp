@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Search, Database, LayoutDashboard, Settings, Map } from 'lucide-react'
 
 const steps = [
@@ -43,17 +43,16 @@ const steps = [
 ]
 
 export default function MetodologiaData() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="metodologia" ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
-      {/* Background */}
+    <section id="metodologia" ref={sectionRef} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#103D96]/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="container-custom relative z-10">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -84,9 +83,7 @@ export default function MetodologiaData() {
           </motion.p>
         </div>
 
-        {/* Steps */}
         <div className="relative">
-          {/* Connection line */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#103D96]/30 to-transparent" />
 
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -98,17 +95,14 @@ export default function MetodologiaData() {
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 className="relative text-center"
               >
-                {/* Number badge */}
                 <div className="relative z-10 w-16 h-16 mx-auto mb-4 bg-black border-2 border-[#103D96] rounded-full flex items-center justify-center">
                   <step.icon className="w-7 h-7 text-[#1E5BBF]" />
                 </div>
 
-                {/* Duration */}
                 <span className="inline-block px-3 py-1 bg-[#103D96]/10 text-[#1E5BBF] text-xs font-body rounded-full mb-3">
                   {step.duration}
                 </span>
 
-                {/* Content */}
                 <h3 className="font-heading font-semibold text-white mb-2">
                   {step.title}
                 </h3>
@@ -123,4 +117,3 @@ export default function MetodologiaData() {
     </section>
   )
 }
-

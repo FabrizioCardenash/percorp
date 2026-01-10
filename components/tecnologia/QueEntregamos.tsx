@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { LayoutDashboard, Database, BookOpen, Bell, Map, ArrowRight } from 'lucide-react'
 
 const deliverables = [
@@ -33,13 +33,13 @@ const deliverables = [
 ]
 
 export default function QueEntregamos() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="entregables" ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-black to-gray-950 text-white overflow-hidden">
+    <section id="entregables" ref={sectionRef} className="relative py-24 md:py-32 bg-gradient-to-b from-black to-gray-950 text-white overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Content */}
           <div>
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,6 @@ export default function QueEntregamos() {
             </motion.div>
           </div>
 
-          {/* Right - Deliverables list */}
           <div className="space-y-4">
             {deliverables.map((item, index) => (
               <motion.div
@@ -111,7 +110,6 @@ export default function QueEntregamos() {
           </div>
         </div>
 
-        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -130,4 +128,3 @@ export default function QueEntregamos() {
     </section>
   )
 }
-

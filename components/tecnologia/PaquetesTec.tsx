@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Check, ArrowRight } from 'lucide-react'
 
 const packages = [
@@ -43,17 +43,16 @@ const packages = [
 ]
 
 export default function PaquetesTec() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="paquetes" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
-      {/* Background */}
+    <section id="paquetes" ref={sectionRef} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#103D96]/5 rounded-full blur-[150px]" />
       </div>
 
       <div className="container-custom relative z-10">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +74,6 @@ export default function PaquetesTec() {
           </motion.h2>
         </div>
 
-        {/* Packages grid */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {packages.map((pkg, index) => (
             <motion.div
@@ -129,4 +127,3 @@ export default function PaquetesTec() {
     </section>
   )
 }
-

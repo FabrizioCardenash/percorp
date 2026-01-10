@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Zap, Award, Target, ClipboardCheck } from 'lucide-react'
 
 const differentiators = [
@@ -28,12 +28,12 @@ const differentiators = [
 ]
 
 export default function Diferenciadores() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-black to-gray-950 text-white overflow-hidden">
+    <section ref={sectionRef} className="relative py-24 md:py-32 bg-gradient-to-b from-black to-gray-950 text-white overflow-hidden">
       <div className="container-custom relative z-10">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,6 @@ export default function Diferenciadores() {
           </motion.h2>
         </div>
 
-        {/* Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {differentiators.map((item, index) => (
             <motion.div
@@ -83,4 +82,3 @@ export default function Diferenciadores() {
     </section>
   )
 }
-

@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Workflow, BarChart3, Lock } from 'lucide-react'
 
 const capabilities = [
@@ -44,12 +44,12 @@ const colorClasses = {
 }
 
 export default function Arquitectura() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="arquitectura" ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
+    <section id="arquitectura" ref={sectionRef} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="container-custom relative z-10">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,6 @@ export default function Arquitectura() {
           </motion.p>
         </div>
 
-        {/* Capabilities grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {capabilities.map((cap, index) => {
             const colors = colorClasses[cap.color as keyof typeof colorClasses]
@@ -116,4 +115,3 @@ export default function Arquitectura() {
     </section>
   )
 }
-

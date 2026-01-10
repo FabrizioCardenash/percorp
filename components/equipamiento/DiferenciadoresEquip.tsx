@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Key, Lightbulb, Workflow } from 'lucide-react'
 
 const differentiators = [
@@ -23,10 +23,11 @@ const differentiators = [
 ]
 
 export default function DiferenciadoresEquip() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section ref={ref} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
+    <section ref={sectionRef} className="relative py-24 md:py-32 bg-black text-white overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>

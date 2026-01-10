@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from '@/hooks/useInView'
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 import { Search, FileText, Box, Wrench, Settings } from 'lucide-react'
 
 const steps = [
@@ -43,10 +43,11 @@ const steps = [
 ]
 
 export default function MetodologiaEquip() {
-  const [ref, isInView] = useInView({ threshold: 0.1 })
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 })
 
   return (
-    <section id="metodologia" ref={ref} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
+    <section id="metodologia" ref={sectionRef} className="relative py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black text-white overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#FF6B00]/5 rounded-full blur-[120px]" />
       </div>
