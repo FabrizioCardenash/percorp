@@ -51,25 +51,49 @@ export default function ContactoTecnologia() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormState({
-        nombre: '',
-        empresa: '',
-        email: '',
-        industria: '',
-        objetivo: '',
-        fuentes: '',
-        usuarios: '',
-        urgencia: '',
-        mensaje: '',
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'a7dd159f-3e6e-4a4c-9f63-545926b89d1c',
+          subject: `📊 Nuevo contacto Tecnología: ${formState.nombre} - ${formState.objetivo}`,
+          from_name: 'PERCORP Tecnología',
+          ccemail: 'mauricioperez.29@hotmail.com',
+          nombre: formState.nombre,
+          empresa: formState.empresa,
+          email: formState.email,
+          industria: formState.industria,
+          objetivo: formState.objetivo,
+          fuentes: formState.fuentes,
+          usuarios: formState.usuarios,
+          urgencia: formState.urgencia,
+          mensaje: formState.mensaje,
+        }),
       })
-    }, 3000)
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormState({
+          nombre: '',
+          empresa: '',
+          email: '',
+          industria: '',
+          objetivo: '',
+          fuentes: '',
+          usuarios: '',
+          urgencia: '',
+          mensaje: '',
+        })
+        setTimeout(() => setIsSubmitted(false), 3000)
+      }
+    } catch (error) {
+      console.error('Error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

@@ -41,25 +41,49 @@ export default function ContactoEquip() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormState({
-        empresa: '',
-        cargo: '',
-        sedes: '',
-        necesidad: '',
-        cantidades: '',
-        fechaObjetivo: '',
-        telefono: '',
-        email: '',
-        mensaje: '',
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'a7dd159f-3e6e-4a4c-9f63-545926b89d1c',
+          subject: `💻 Nuevo contacto Equipamiento: ${formState.empresa} - ${formState.necesidad}`,
+          from_name: 'PERCORP Equipamiento',
+          ccemail: 'mauricioperez.29@hotmail.com',
+          empresa: formState.empresa,
+          cargo: formState.cargo,
+          sedes: formState.sedes,
+          necesidad: formState.necesidad,
+          cantidades: formState.cantidades,
+          fecha_objetivo: formState.fechaObjetivo,
+          telefono: formState.telefono,
+          email: formState.email,
+          mensaje: formState.mensaje,
+        }),
       })
-    }, 3000)
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormState({
+          empresa: '',
+          cargo: '',
+          sedes: '',
+          necesidad: '',
+          cantidades: '',
+          fechaObjetivo: '',
+          telefono: '',
+          email: '',
+          mensaje: '',
+        })
+        setTimeout(() => setIsSubmitted(false), 3000)
+      }
+    } catch (error) {
+      console.error('Error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (

@@ -41,26 +41,47 @@ export default function ContactoEnergia() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    // Reset after showing success
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormState({
-        nombre: '',
-        empresa: '',
-        cargo: '',
-        email: '',
-        telefono: '',
-        ciudad: '',
-        tipoOperacion: '',
-        mensaje: '',
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'a7dd159f-3e6e-4a4c-9f63-545926b89d1c',
+          subject: `⚡ Nuevo contacto Energía: ${formState.nombre} - ${formState.tipoOperacion}`,
+          from_name: 'PERCORP Energía',
+          ccemail: 'mauricioperez.29@hotmail.com',
+          nombre: formState.nombre,
+          empresa: formState.empresa,
+          cargo: formState.cargo,
+          email: formState.email,
+          telefono: formState.telefono,
+          ciudad: formState.ciudad,
+          tipo_operacion: formState.tipoOperacion,
+          mensaje: formState.mensaje,
+        }),
       })
-    }, 3000)
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormState({
+          nombre: '',
+          empresa: '',
+          cargo: '',
+          email: '',
+          telefono: '',
+          ciudad: '',
+          tipoOperacion: '',
+          mensaje: '',
+        })
+        setTimeout(() => setIsSubmitted(false), 3000)
+      }
+    } catch (error) {
+      console.error('Error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
