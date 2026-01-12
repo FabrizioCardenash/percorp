@@ -3,7 +3,16 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
+
+const empresas = [
+  { name: 'Infraestructura', href: '/infraestructura', description: 'Arquitectura, construcción y gestión', color: '#7800FF' },
+  { name: 'Energía', href: '/energia', description: 'Infraestructura eléctrica y optimización', color: '#FFC700', active: true },
+  { name: 'Equipamiento', href: '/equipamiento', description: 'Laptops, salas AV e integración', color: '#FF6B00' },
+  { name: 'Tecnología', href: '/tecnologia', description: 'Data Analytics & Dashboards', color: '#1E5BBF' },
+  { name: 'Conectividad', href: '/conectividad', description: 'Redes y comunicaciones', color: '#00B4D8' },
+  { name: 'Automatización', href: '/automatizacion', description: 'Control y sistemas inteligentes', color: '#10B981' },
+]
 
 const navItems = [
   { name: 'Servicios', href: '#servicios' },
@@ -18,6 +27,7 @@ const navItems = [
 export default function EnergiaHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isEmpresasOpen, setIsEmpresasOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,12 +60,60 @@ export default function EnergiaHeader() {
             </Link>
 
             {/* Nav Desktop */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <nav className="hidden lg:flex items-center gap-1">
+              {/* Dropdown Empresas */}
+              <div 
+                className="relative"
+                onMouseEnter={() => setIsEmpresasOpen(true)}
+                onMouseLeave={() => setIsEmpresasOpen(false)}
+              >
+                <button
+                  className={`flex items-center gap-1 px-3 py-2 text-sm font-body transition-colors ${
+                    isEmpresasOpen ? 'text-white' : 'text-white/70 hover:text-white'
+                  }`}
+                >
+                  Nuestras Empresas
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isEmpresasOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                <AnimatePresence>
+                  {isEmpresasOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-2 w-72 bg-black/95 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-xl"
+                    >
+                      {empresas.map((empresa) => (
+                        <Link
+                          key={empresa.name}
+                          href={empresa.href}
+                          className={`block px-5 py-4 hover:bg-white/10 transition-colors border-b border-white/5 last:border-0 ${
+                            empresa.active ? 'bg-white/5' : ''
+                          }`}
+                        >
+                          <span 
+                            className="block font-body font-medium"
+                            style={{ color: empresa.color }}
+                          >
+                            {empresa.name}
+                            {empresa.active && <span className="ml-2 text-xs text-white/50">(actual)</span>}
+                          </span>
+                          <span className="block text-white/50 text-xs mt-0.5">{empresa.description}</span>
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Nav Items */}
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-body text-white/80 hover:text-white transition-colors"
+                  className="px-3 py-2 text-sm font-body text-white/70 hover:text-white transition-colors"
                 >
                   {item.name}
                 </a>
@@ -92,21 +150,54 @@ export default function EnergiaHeader() {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-black/95 backdrop-blur-md border-t border-white/10"
             >
-              <nav className="container-custom py-6 space-y-4">
-                {navItems.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-base font-body text-white/80 hover:text-white transition-colors py-2"
-                  >
-                    {item.name}
-                  </a>
-                ))}
+              <nav className="container-custom py-6">
+                {/* Empresas Section */}
+                <div className="mb-6">
+                  <p className="text-white/50 text-xs font-body uppercase tracking-wider mb-3">Nuestras Empresas</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {empresas.map((empresa) => (
+                      <Link
+                        key={empresa.name}
+                        href={empresa.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`block p-3 rounded-lg transition-colors ${
+                          empresa.active ? 'bg-[#FFC700]/20 border border-[#FFC700]/30' : 'bg-white/5 hover:bg-white/10'
+                        }`}
+                      >
+                        <span 
+                          className="block font-body font-medium text-sm"
+                          style={{ color: empresa.color }}
+                        >
+                          {empresa.name}
+                        </span>
+                        <span className="block text-white/40 text-xs mt-0.5">{empresa.description}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Divider */}
+                <div className="border-t border-white/10 my-4" />
+
+                {/* Nav Items */}
+                <div className="space-y-1">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block py-3 text-base font-body text-white/70 hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+
+                {/* CTA Mobile */}
                 <a
                   href="#contacto"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium font-body text-black bg-[#FFC700] hover:bg-[#FFD633] transition-all duration-300 rounded-lg mt-4"
+                  className="mt-6 w-full inline-flex items-center justify-center px-6 py-3 text-sm font-medium font-body text-black bg-[#FFC700] hover:bg-[#FFD633] transition-all duration-300 rounded-lg"
                 >
                   Solicitar diagnóstico
                 </a>

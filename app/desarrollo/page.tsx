@@ -1,39 +1,50 @@
 import { Metadata } from 'next'
-import Header from '@/components/layout/Header'
-import Hero from '@/components/sections/Hero'
-import VisionSection from '@/components/sections/VisionSection'
-import QuienesSomos from '@/components/sections/QuienesSomos'
-import NuestrasEmpresas from '@/components/sections/NuestrasEmpresas'
-import NuestroModelo from '@/components/sections/NuestroModelo'
-import Filosofia from '@/components/sections/Filosofia'
-import Sectores from '@/components/sections/Sectores'
-import ComoTrabajamos from '@/components/sections/ComoTrabajamos'
-import CTAFinal from '@/components/sections/CTAFinal'
-import Footer from '@/components/layout/Footer'
+import ControlHeader from '@/components/control-operativo/ControlHeader'
+import ControlHero from '@/components/control-operativo/ControlHero'
+import DolorGerencial from '@/components/control-operativo/DolorGerencial'
+import LaSolucion from '@/components/control-operativo/LaSolucion'
+import Resultados from '@/components/control-operativo/Resultados'
+import PorQuePERCORP from '@/components/control-operativo/PorQuePERCORP'
+import CasosDeUso from '@/components/control-operativo/CasosDeUso'
+import ComoTrabajamos from '@/components/control-operativo/ComoTrabajamos'
+import Ofertas from '@/components/control-operativo/Ofertas'
+import LeadMagnet from '@/components/control-operativo/LeadMagnet'
+import Contacto from '@/components/control-operativo/Contacto'
+import FAQ from '@/components/control-operativo/FAQ'
+import CTAFinal from '@/components/control-operativo/CTAFinal'
+import ControlFooter from '@/components/control-operativo/ControlFooter'
 
 export const metadata: Metadata = {
-  title: 'PERCORP | Desarrollo - Página en construcción',
-  description: 'Página en desarrollo de PERCORP.',
-  robots: 'noindex, nofollow', // Para que Google no indexe esta página
+  title: 'PERCORP | Sistema de Control Operativo para tu negocio',
+  description: 'Implementamos un sistema simple de control: tablero de indicadores, rutina de gestión y automatización. Resultados visibles en semanas.',
+  keywords: ['control operativo', 'tablero de indicadores', 'KPIs', 'automatización', 'gestión empresarial', 'PERCORP'],
+  openGraph: {
+    title: 'Control real para tu negocio | PERCORP',
+    description: 'Menos sorpresas, mejores decisiones. Tablero + rutina + automatización, llave en mano.',
+    type: 'website',
+    locale: 'es_PE',
+  },
 }
 
 export default function DesarrolloPage() {
   return (
     <>
-      <Header />
+      <ControlHeader />
       <main>
-        <Hero />
-        <VisionSection />
-        <QuienesSomos />
-        <NuestrasEmpresas />
-        <NuestroModelo />
-        <Filosofia />
-        <Sectores />
+        <ControlHero />
+        <DolorGerencial />
+        <LaSolucion />
+        <Resultados />
+        <PorQuePERCORP />
+        <CasosDeUso />
         <ComoTrabajamos />
+        <Ofertas />
+        <LeadMagnet />
+        <Contacto />
+        <FAQ />
         <CTAFinal />
       </main>
-      <Footer />
+      <ControlFooter />
     </>
   )
 }
-
