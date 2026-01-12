@@ -46,12 +46,9 @@ export default function ControlHeader() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center group">
             <span className="text-xl md:text-2xl font-heading font-bold text-white">
               PERCORP
-            </span>
-            <span className="hidden sm:block text-[10px] md:text-xs font-body text-white/50 border-l border-white/20 pl-3">
-              Sistema de Control Operativo
             </span>
           </Link>
 
