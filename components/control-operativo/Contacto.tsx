@@ -36,10 +36,51 @@ export default function Contacto() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simular envío
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'a7dd159f-3e6e-4a4c-9f63-545926b89d1c',
+          subject: `📊 Nuevo contacto Control Operativo: ${formData.nombre} - ${formData.controlar}`,
+          from_name: 'PERCORP Control Operativo',
+          ccemail: 'mauricioperez.29@hotmail.com',
+          nombre: formData.nombre,
+          empresa: formData.empresa,
+          cargo: formData.cargo,
+          email: formData.email,
+          whatsapp: formData.whatsapp || 'No proporcionado',
+          que_controlar: formData.controlar,
+          urgencia: formData.urgencia,
+        }),
+      })
+
+      const data = await response.json()
+      
+      if (data.success) {
+        setIsSubmitted(true)
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setFormData({
+            nombre: '',
+            empresa: '',
+            cargo: '',
+            email: '',
+            whatsapp: '',
+            controlar: '',
+            urgencia: ''
+          })
+        }, 3000)
+      }
+    } catch (error) {
+      console.error('Error enviando formulario:', error)
+      alert('Hubo un error al enviar el formulario. Por favor intenta de nuevo.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
