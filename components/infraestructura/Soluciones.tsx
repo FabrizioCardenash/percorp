@@ -14,12 +14,6 @@ const soluciones = [
     imagenes: ['/rendersdeproyectos/OF1.jpg', '/rendersdeproyectos/OF2.jpg', '/rendersdeproyectos/OF3.jpg', '/rendersdeproyectos/OFICINA SALA ESPERA.jpg'],
   },
   {
-    id: 'retail',
-    titulo: 'Tiendas & retail',
-    descripcion: 'Concepto moderno e inmersivo con interacción audiovisual e iluminación enfocada en producto.',
-    imagenes: ['/rendersdeproyectos/RET1.jpg', '/rendersdeproyectos/RET2.jpg'],
-  },
-  {
     id: 'cafeterias',
     titulo: 'Cafeterías & restaurantes',
     descripcion: 'Experiencia sensorial cuidada, atmósfera cálida y sofisticada.',
