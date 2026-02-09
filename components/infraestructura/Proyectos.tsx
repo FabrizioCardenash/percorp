@@ -12,7 +12,7 @@ const proyectos = [
     tipo: 'Remodelación de oficinas',
     area: '170 m²',
     desarrollo: 'Diseño (1 mes)',
-    imagen: '/rendersdeproyectos/OF1.jpg',
+    imagen: '/rendersdeproyectos/OFICINA PANORAMA.jpg',
   },
   {
     titulo: 'Parque Pampaflores',
@@ -20,7 +20,7 @@ const proyectos = [
     tipo: 'Consultoría de rediseño de espacio público',
     area: null,
     desarrollo: null,
-    imagen: '/rendersdeproyectos/OF2.jpg',
+    imagen: '/rendersdeproyectos/PARQUE PAMPA FLORES.jpg',
   },
 ]
 
